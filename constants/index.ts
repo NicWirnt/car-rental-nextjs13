@@ -53,6 +53,7 @@ export const yearsOfProduction = [
   { title: "2021", value: "2021" },
   { title: "2022", value: "2022" },
   { title: "2023", value: "2023" },
+  { title: "2024", value: "2024" },
 ];
 
 export const fuels = [
@@ -62,11 +63,15 @@ export const fuels = [
   },
   {
     title: "Gas",
-    value: "Gas",
+    value: "gas",
   },
   {
     title: "Electricity",
-    value: "Electricity",
+    value: "electricity",
+  },
+  {
+    title: "Diesel",
+    value: "diesel",
   },
 ];
 
@@ -99,4 +104,3 @@ export const footerLinks = [
     ],
   },
 ];
-564;

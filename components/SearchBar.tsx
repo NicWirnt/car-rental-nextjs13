@@ -5,6 +5,11 @@ import { SearchManufacturer } from ".";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
+interface SearchBarProps {
+  setManufacturer: any;
+  setModel: any;
+}
+
 const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
   <button type="submit" className={`-ml-3 z-10 ${otherClasses}`}>
     <Image
@@ -17,7 +22,7 @@ const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
   </button>
 );
 
-const SearchBar = ({ setManufacturer, setModel }) => {
+const SearchBar = ({ setManufacturer, setModel }: SearchBarProps) => {
   const [searchModel, setSearchModel] = useState("");
   const [searchManufacturer, setSearchManufacturer] = useState("");
   const router = useRouter();
@@ -39,6 +44,10 @@ const SearchBar = ({ setManufacturer, setModel }) => {
         <SearchManufacturer
           selected={searchManufacturer}
           setSelected={setSearchManufacturer}
+          manufacturer={""}
+          setManufacturer={function (manufacturer: string): void {
+            throw new Error("Function not implemented.");
+          }}
         />
         <SearchButton otherClasses="sm:hidden" />
       </div>
