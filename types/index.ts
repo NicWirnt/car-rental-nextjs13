@@ -30,6 +30,7 @@ export interface CarProps {
   model: string;
   transmission: string;
   year: number;
+  message: string;
 }
 
 export interface FilterProps {
@@ -47,6 +48,7 @@ export interface OptionProps {
 export interface CustomFilterProps {
   title: string;
   options: OptionProps[];
+  setFilter: any;
 }
 
 export interface ShowMoreProps {
