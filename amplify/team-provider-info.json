@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-carrentalnextjs13-dev-144015-authRole",
+      "UnauthRoleArn": "arn:aws:iam::148368614069:role/amplify-carrentalnextjs13-dev-144015-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::148368614069:role/amplify-carrentalnextjs13-dev-144015-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-carrentalnextjs13-dev-144015-deployment",
+      "UnauthRoleName": "amplify-carrentalnextjs13-dev-144015-unauthRole",
+      "StackName": "amplify-carrentalnextjs13-dev-144015",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:148368614069:stack/amplify-carrentalnextjs13-dev-144015/f5e20e90-b420-11ee-b032-06b27798c47b",
+      "AmplifyAppId": "d1rc5rop2ucc8z"
+    }
+  }
+}
