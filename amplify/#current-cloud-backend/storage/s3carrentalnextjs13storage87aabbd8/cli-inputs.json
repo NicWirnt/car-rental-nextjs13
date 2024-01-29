@@ -1,0 +1,14 @@
+{
+  "resourceName": "s3carrentalnextjs13storage87aabbd8",
+  "bucketName": "car-rental-nextjs13-storage-87aabbd8",
+  "policyUUID": "38529b55",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}

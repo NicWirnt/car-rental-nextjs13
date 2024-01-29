@@ -1,0 +1,79 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifyd8cdbea0ee774-staging-22906-authRole",
+      "UnauthRoleArn": "arn:aws:iam::148368614069:role/amplify-amplifyd8cdbea0ee774-staging-22906-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::148368614069:role/amplify-amplifyd8cdbea0ee774-staging-22906-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-amplifyd8cdbea0ee774-staging-22906-deployment",
+      "UnauthRoleName": "amplify-amplifyd8cdbea0ee774-staging-22906-unauthRole",
+      "StackName": "amplify-amplifyd8cdbea0ee774-staging-22906",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:148368614069:stack/amplify-amplifyd8cdbea0ee774-staging-22906/05f2f4c0-b417-11ee-86b5-06074bce9ddf",
+      "AmplifyAppId": "d2065ecrdl1pdt"
+    }
+  },
+  "auth": {
+    "carrentalnextjs13": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_UPPERCASE"
+          ]
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "output": {
+        "UserPoolId": "ap-southeast-2_5MbtLRAEb",
+        "AppClientIDWeb": "4eslraaavffeia6m7m00jc0u5n",
+        "AppClientID": "n16atgi0ks4fu8c5eeto6jj49",
+        "IdentityPoolId": "ap-southeast-2:1dc7f26e-8145-415b-8239-a206f6111192",
+        "UserPoolArn": "arn:aws:cognito-idp:ap-southeast-2:148368614069:userpool/ap-southeast-2_5MbtLRAEb",
+        "IdentityPoolName": "testAuthIdentityPool__staging",
+        "UserPoolName": "carrentalnextjs13"
+      },
+      "lastPushTimeStamp": "2024-01-29T13:31:31.856Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyd8cdbea0ee774-staging-22906-deployment/amplify-cfn-templates/auth/carrentalnextjs13-cloudformation-template.json",
+        "logicalId": "authcarrentalnextjs13"
+      },
+      "lastPushDirHash": "hO3O4JmMDu39KYKKKkSUu7M0s28="
+    }
+  },
+  "storage": {
+    "s3carrentalnextjs13storage87aabbd8": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "lastPushTimeStamp": "2024-01-29T13:31:31.856Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyd8cdbea0ee774-staging-22906-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storages3carrentalnextjs13storage87aabbd8"
+      },
+      "output": {
+        "BucketName": "car-rental-nextjs13-storage-87aabbd822906-staging",
+        "Region": "ap-southeast-2"
+      },
+      "lastPushDirHash": "QWCpLPbJY5eMYonvQTShdLRq7GU="
+    }
+  }
+}

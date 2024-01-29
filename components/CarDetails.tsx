@@ -1,12 +1,13 @@
 "use client";
 
 import { CarProps } from "@/types";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { Fragment } from "react";
 
 import { Dialog, Transition } from "@headlessui/react";
 import { generateCarImageUrl } from "@/utils";
+import Link from "next/link";
 
 interface CarDetailsProps {
   isOpen: boolean;
@@ -15,6 +16,15 @@ interface CarDetailsProps {
 }
 
 const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
+  const [dateValue, setDateValue] = useState("");
+  const [isRentSuccess, setIsRentSuccess] = useState(false);
+  const handleOnRentClick = () => {
+    if (dateValue === "") {
+      return alert("Pleaes Select Date");
+    } else {
+      setIsRentSuccess(true);
+    }
+  };
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
@@ -113,8 +123,39 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                           </p>
                         </div>
                       ))}
+                      <div className="flex  justify-between gap-5 w-full">
+                        <div>Pick a date</div>
+                        <input
+                          type="date"
+                          onChange={(e) => {
+                            setDateValue(e.target.value);
+                          }}
+                        ></input>
+                      </div>
                     </div>
                   </div>
+                  {isRentSuccess && (
+                    <div className="modal">
+                      <div className="modal-content">
+                        <span
+                          className="close"
+                          onClick={() => setIsRentSuccess(false)}
+                        >
+                          &times;
+                        </span>
+                        <p>
+                          Rent Successful! Instructions have been sent to your
+                          email.
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                  <button
+                    className="bg-blue-400 p-2 rounded-lg text-white hover:bg-blue-800"
+                    onClick={handleOnRentClick}
+                  >
+                    Rent
+                  </button>
                 </Dialog.Panel>
               </Transition.Child>
             </div>
