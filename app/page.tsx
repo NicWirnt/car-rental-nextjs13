@@ -10,6 +10,7 @@ import { CarProps } from "@/types";
 export default function Home() {
   const [allCars, setAllCars] = useState([]);
   const [loading, setLoading] = useState(true);
+
   //search states
   const [manufacturer, setManufacturer] = useState("");
   const [model, setModel] = useState("");

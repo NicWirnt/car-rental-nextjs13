@@ -5,22 +5,25 @@ import { Amplify, Auth } from "aws-amplify";
 import type { WithAuthenticatorProps } from "@aws-amplify/ui-react";
 import { Authenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
-import config from "../../src/amplifyconfiguration.json";
-import Link from "next/link";
+import config from "../src/amplifyconfiguration.json";
 Amplify.configure(config);
-const page = ({ signOut, user }: WithAuthenticatorProps) => {
+const SignInForm = ({
+  signOut,
+  user,
+}: {
+  signOut: WithAuthenticatorProps;
+  user: WithAuthenticatorProps;
+}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const services = {
     async handleSignUp(formData: any) {
       let { username, password, attributes } = formData;
+      // custom username
       username = username.toLowerCase();
       attributes.email = attributes.email.toLowerCase();
-
-      return console.log(username, attributes);
-      const signUpResult = Auth.signUp({
+      return Auth.signUp({
         username,
         password,
         attributes,
@@ -28,7 +31,6 @@ const page = ({ signOut, user }: WithAuthenticatorProps) => {
           enabled: true,
         },
       });
-      return signUpResult;
     },
   };
 
@@ -41,4 +43,4 @@ const page = ({ signOut, user }: WithAuthenticatorProps) => {
   );
 };
 
-export default page;
+export default SignInForm;
